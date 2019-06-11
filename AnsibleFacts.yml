@@ -5,4 +5,4 @@
   tasks:
     - name: output variable ansible_facts
       debug:
-        var: ansible_facts:
+        var: ansible_facts
