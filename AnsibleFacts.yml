@@ -3,6 +3,6 @@
   hosts: all
   
   tasks:
-    - name: show ansible_facts
+    - name: output variable ansible_facts
       debug:
         var: ansible_facts:
