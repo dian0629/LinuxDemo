@@ -3,6 +3,6 @@
   hosts: all
   
   tasks:
-    - name: output variable
+    - name: output variable ansible_env
       debug:
         var: ansible_env
