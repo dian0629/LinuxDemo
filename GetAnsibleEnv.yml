@@ -3,5 +3,4 @@
   hosts: all
   
   tasks:
-    - debug:
-       var: ansible_env
+    - debug: var=ansible_env
