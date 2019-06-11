@@ -1,6 +1,7 @@
 ---
-- name: PING HOST
+- name: PING LINUX HOSTS
   hosts: all
   
   tasks:
-    - ping:
+  - name: ping
+    ping:
