@@ -1,6 +1,0 @@
----
-- name: GET ANSIBLE_ENV FROM GATHER_FACTS
-  hosts: all
-  
-  tasks:
-    - debug: var=ansible_env
