@@ -1,8 +1,6 @@
 ---
-- name: PING LINUX HOSTS
-  hosts: all
+
+- hosts: all
   gather_facts: false
-  
   tasks:
-    - name: call ping module
-      ping:
+    - ping:
