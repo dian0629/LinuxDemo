@@ -1,5 +1,5 @@
 ---
-- name: DISPLAY ANSIBLE_ENV VAR
+- name: DISPLAY ANSIBLE_ENV
   hosts: all
   
   tasks:
