@@ -1,0 +1,8 @@
+---
+- name: DISPLAY ANSIBLE_ENV VAR
+  hosts: all
+  
+  tasks:
+    - name: output variable
+      debug:
+        var: ansible_env
