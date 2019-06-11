@@ -1,6 +1,7 @@
 ---
 - name: PING LINUX HOSTS
   hosts: all
+  gather_facts: false
   
   tasks:
     - name: ping
