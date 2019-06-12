@@ -5,4 +5,4 @@
   tasks:
     - name: call selinux module
       selinux:
-        state: disable
+        state: disabled
