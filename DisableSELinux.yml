@@ -1,0 +1,8 @@
+---
+- name: DISABLE SELINUX
+  hosts: all
+  
+  tasks:
+    - name: call selinux module
+      selinux:
+        state: disable
