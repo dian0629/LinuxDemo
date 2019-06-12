@@ -1,4 +1,0 @@
-# Install from Ansible Galaxy
-- src: linux-system-roles.network
-- src: linux-system-roles.selinux
-- src: linux-system-roles.firewall
