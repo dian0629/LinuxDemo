@@ -1,6 +1,7 @@
 ---
 - name: REBOOT LINUX HOSTS
   hosts: all
+  become: yes
   
   tasks:
     - name: call reboot module
