@@ -1,6 +1,7 @@
 ---
 - name: DISABLE SELINUX
   hosts: all
+  become: yes
   
   tasks:
     - name: call selinux module
