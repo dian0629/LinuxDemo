@@ -1,0 +1,6 @@
+---
+- name: REBOOT LINUX HOSTS
+  hosts: all
+  
+  tasks:
+    reboot:
