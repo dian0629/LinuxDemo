@@ -1,5 +1,5 @@
 - name: RUN YUM UPDATES
-  hosts: "{{ all | default(target_hosts) }}"
+  hosts: all
   become: yes
 
   tasks:
