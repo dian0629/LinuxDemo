@@ -3,4 +3,5 @@
   hosts: all
   
   tasks:
-    reboot:
+    - name: call reboot module
+      reboot:
