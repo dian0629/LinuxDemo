@@ -4,7 +4,7 @@
   become: yes
   
   tasks:
-  - name: CREATE A BACKUP COPY OF IFCFG-ETH0
+  - name: create a backup copy of ifcfg-eth0
     copy:
       src: /etc/sysconfig/network-scripts/ifcfg-eth0
       dest: /etc/sysconfig/network-scripts/backup-eth0
