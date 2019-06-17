@@ -1,12 +1,12 @@
 ---
-- name: 
+- name: RUN IP LINK SHOW COMMAND
   hosts: all
   become: yes
   
   tasks:
-  - name:
+  - name: run the ip link show command
     command: ip link show
     register: iplink
     
-  - name:
+  - name: show the results
     debug: var=iplink
