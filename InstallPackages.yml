@@ -15,4 +15,6 @@
       register: results
       
     - name: display results
-      debug: var=results
+      debug:
+        var: results
+      when: results is changed
