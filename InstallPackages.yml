@@ -1,0 +1,14 @@
+---
+- name: INSTALL MULTIPLE PACKAGES
+  hosts: all
+  become: yes
+  
+  tasks: 
+    - name: install packages with yum
+      yum:
+        name:
+          - net-tools
+          - wget
+          - perl
+        state: present
+        update_cache: yes
