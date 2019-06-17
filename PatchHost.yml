@@ -4,8 +4,14 @@
   become: yes
   
   tasks:
-  - name:
+  - name: apply yum updates
     yum:
       name: '*'
       state: latest
-      update_only: no
+    register:
+      task_result
+      
+  - name: print results if updates were made
+    debug:
+      var: task_result
+    when: task_result is changed
