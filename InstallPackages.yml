@@ -14,7 +14,7 @@
         update_cache: yes
       register: results
       
-    - name: display results
+    - name: display results if packages were installed
       debug:
         var: results
       when: results is changed
