@@ -7,4 +7,5 @@
   - name:
     yum:
       name: '*'
-      state: latest      
+      state: latest
+      update_only: no
