@@ -8,6 +8,9 @@
     yum:
       name: '*'
       state: latest
+      disable_gpg_check: yes
+      update_cache: yes
+      
     register:
       task_result
       
