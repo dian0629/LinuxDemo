@@ -9,4 +9,4 @@
     register: iplink
     
   - name:
-    debug: iplink
+    debug: var=iplink
