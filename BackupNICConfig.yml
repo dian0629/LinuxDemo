@@ -1,0 +1,10 @@
+---
+- name: BACK UP THE IFCFG FILES
+  hosts: all
+  become: yes
+  
+  tasks:
+  - name: CREATE A BACKUP COPY OF IFCFG-ETH0
+    copy:
+      src: /etc/sysconfig/network-scripts/ifcfg-eth0
+      dest: /etc/sysconfig/network-scripts/backup-eth0
