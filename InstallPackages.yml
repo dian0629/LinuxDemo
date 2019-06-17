@@ -12,3 +12,7 @@
           - perl
         state: present
         update_cache: yes
+      register: results
+      
+    - name: display results
+      debug: var=results
