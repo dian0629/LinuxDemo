@@ -1,0 +1,10 @@
+---
+- name: UPDATE ALL PACKAGES WITH YUM
+  hosts: all
+  become: yes
+  
+  tasks:
+  - name:
+    yum:
+      name: '*'
+      state: latest      
