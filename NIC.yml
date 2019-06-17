@@ -5,5 +5,8 @@
   
   tasks:
   - name:
+    command: ip link show
+    register: iplink
     
-  
+  - name:
+    debug: iplink
