@@ -1,4 +1,10 @@
 ---
 - name: INSTALL HTOP
   hosts: all
+  become: yes
   
+  tasks:
+    - name: install htop using the yum module
+      yum:
+        name: htop
+        state: latest
