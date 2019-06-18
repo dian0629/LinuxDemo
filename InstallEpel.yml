@@ -15,3 +15,11 @@
       debug:
         var: results
       when: results is changed
+      
+    - name: display installed repositories
+      command: yum repolist
+      register: repolist
+      
+    - name: display repolist
+      debug:
+        var: repolist
