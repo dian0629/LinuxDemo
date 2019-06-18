@@ -1,16 +1,17 @@
 ---
-- name:
+- name: INSTALL EPEL REPOSITORY
   hosts: all
   become: yes
   
   tasks:
-    - name:
+    - name: download latest epel repo from fedoraproject.org
       yum_repository:
         name: epel
         description: EPEL YUM repo
         baseurl: https://download.fedoraproject.org/pub/epel/$releasever/$basearch/
       register: results
       
-    - name:
+    - name: display results
       debug:
         var: results
+      when: results is changed
