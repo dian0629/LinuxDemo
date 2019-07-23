@@ -12,5 +12,5 @@
       
     - name: display results
       debug:
-        var: results
+        var: results.results
       when: results is changed
