@@ -18,7 +18,7 @@
       
     - name: display installed repositories
       command: yum repolist
-      warn: false
+        warn: false
       register: repolist
       
     - name: display repolist
