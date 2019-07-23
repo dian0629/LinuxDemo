@@ -10,4 +10,4 @@
     
   - name: show the results
     debug: 
-      var: iplink
+      var: iplink.stdout
