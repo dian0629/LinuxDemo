@@ -22,4 +22,4 @@
       
     - name: display repolist
       debug:
-        var: repolist
+        var: repolist.stdout_lines
