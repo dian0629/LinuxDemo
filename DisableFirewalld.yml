@@ -10,6 +10,10 @@
         enabled: no
       register: status
     
-    - name: verify firewalld is disabled
+    - name: verify firewalld is stopped
       debug:
-        var: status
+        var: status.state
+        
+    - name: verify firewalld state is not enabled
+      debug:
+        var: status.enabled
