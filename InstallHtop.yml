@@ -7,10 +7,10 @@
     - name: install htop using the yum module
       yum:
         name: htop
-        state: absent
+        state: present
       register: results
       
     - name: display results
       debug:
-        var: results.results
+        var: results
       when: results is changed
