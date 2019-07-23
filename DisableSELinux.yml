@@ -4,11 +4,11 @@
   become: yes
   
   tasks:
-    - name: call selinux module
+    - name: disable selinux
       selinux:
         state: disabled
       register: selinux
       
     - name: show status
       debug:
-        var: selinux
+        var: selinux.state
