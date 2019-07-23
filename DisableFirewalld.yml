@@ -1,0 +1,15 @@
+---
+name: DISABLE FIREWALL
+hosts: all
+
+tasks:
+  - name: ensure firewalld service is stopped and disabled
+    service:
+      name: firewalld
+      state: stopped
+      enabled: no
+    register: status
+    
+  - name: verify firewalld is disabled
+    debug:
+      msg: status
