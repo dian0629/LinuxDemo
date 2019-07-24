@@ -4,7 +4,12 @@
   become: yes
   
   tasks:
-  - name: create a backup copy of ifcfg-eth0
+  - name: create a backup copy of ifcfg-ens192
     copy:
-      src: /etc/sysconfig/network-scripts/ifcfg-eth0
-      dest: /etc/sysconfig/network-scripts/backup-eth0
+      src: /etc/sysconfig/network-scripts/ifcfg-ens192
+      dest: /etc/sysconfig/network-scripts/backup-ens192
+      
+  - name: create a backup copy of ifcfg-ens224
+    copy:
+      src: /etc/sysconfig/network-scripts/ifcfg-ens224
+      dest: /etc/sysconfig/network-scripts/backup-ens224
