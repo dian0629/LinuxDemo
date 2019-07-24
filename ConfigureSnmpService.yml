@@ -1,0 +1,20 @@
+    
+---
+- name: START AND SET SNMPD SERVICE TO ENABLED
+  hosts: all
+
+  tasks:
+    - name: ensure snmpd service is started and enabled
+      service:
+        name: snmpd
+        state: started
+        enabled: yes
+      register: status
+    
+    - name: verify snmpd is stopped
+      debug:
+        var: status.state
+        
+    - name: verify snmpd state is not enabled
+      debug:
+        var: status.enabled
