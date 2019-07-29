@@ -7,7 +7,7 @@
     - name: install htop using the yum module
       yum:
         name: htop
-        state: present
+        state: absent
       register: results
       
     - name: display results
