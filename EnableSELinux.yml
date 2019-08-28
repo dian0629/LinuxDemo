@@ -1,0 +1,14 @@
+---
+- name: ENABLE SELINUX
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: enable selinux
+      selinux:
+        state: enabled
+      register: selinux
+      
+    - name: show status
+      debug:
+        var: selinux.state
