@@ -1,0 +1,16 @@
+---
+- name: INSTALL EPEL REPOSITORY
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: add a line to the hosts file if it does not exist
+      lineinfile:
+        path: /etc/hosts
+        line: 10.249.0.137  AWX
+        create: yes
+      register: hostsfile
+      
+    - name: display hosts file
+      debug:
+        var: hostsfile
