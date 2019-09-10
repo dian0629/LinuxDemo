@@ -1,5 +1,5 @@
 ---
-- name: DISABLE SELINUX
+- name: DISABLE SELINUX AND REBOOT
   hosts: all
   become: yes
   
@@ -12,3 +12,6 @@
     - name: show status
       debug:
         var: selinux.state
+        
+    - name: call reboot module
+      reboot:
