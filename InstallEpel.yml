@@ -17,9 +17,7 @@
       when: results is changed
       
     - name: display installed repositories
-      #command: yum repolist
-      yum:
-        list: repos
+      command: yum repolist
       register: repolist
       
     - name: display repolist
