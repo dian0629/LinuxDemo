@@ -1,0 +1,4 @@
+---
+- name: INSTALL POSTGRESQL RPM
+  hosts: all
+  become: yes
