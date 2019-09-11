@@ -14,3 +14,4 @@
       yum:
         name: postgresql11-server
         state: present
+        disable_gpg_check: yes
