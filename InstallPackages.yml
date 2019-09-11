@@ -10,8 +10,8 @@
           - rabbitmq-server
           - wget
           - memcached
-          nginx
-          ansible
+          - nginx
+          - ansible
         state: present
         update_cache: yes
       register: results
