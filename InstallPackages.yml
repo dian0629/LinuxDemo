@@ -7,9 +7,11 @@
     - name: install packages with yum
       yum:
         name:
-          - net-tools
+          - rabbitmq-server
           - wget
-          - perl
+          - memcached
+          nginx
+          ansible
         state: present
         update_cache: yes
       register: results
