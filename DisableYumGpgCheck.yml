@@ -8,4 +8,4 @@
       lineinfile:
         path: /etc/yum.conf
         regexp: '^gpgcheck'
-        line: gpgcheck=1
+        line: gpgcheck=0
