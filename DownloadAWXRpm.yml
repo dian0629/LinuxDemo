@@ -11,16 +11,9 @@
         description: AWX RPM
         baseurl: https://copr.fedorainfracloud.org/coprs/mrmeee/awx/repo/epel-7/mrmeee-awx-epel-7.repo
       register: results
-      
-    - name: display results
-      debug:
-        var: results
-      when: results is changed
-      
-    - name: display installed repositories
-      command: yum repolist
-      register: repolist
-      
-    - name: display repolist
-      debug:
-        var: repolist.stdout_lines
+
+    - name: install awx
+      yum:
+        name: awx
+        state: present
+        disable_gpg_check: yes
