@@ -6,4 +6,4 @@
   tasks:
     - name: display ansible_facts.all_ipv4_addresses
       debug:
-        var: all_ipv4_addresses
+        var: ansible_facts.all_ipv4_addresses
