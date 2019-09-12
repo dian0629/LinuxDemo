@@ -1,0 +1,13 @@
+---
+  - name: ACTIVATE CENTOS SOFTWARE COLLECTIONS
+    hosts: all
+    become: yes
+    
+    tasks:
+      - name: install centos release collections
+        yum:
+          name:
+            - centos-release-scl
+            - centos-release-scl-rh
+          state: present
+          disable_gpg_check: yes
