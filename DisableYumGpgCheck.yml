@@ -1,0 +1,11 @@
+---
+- name: ENSURE GPGCHECK IS DISABLED IN YUM.CONF
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: ensure gpgcheck is set to 0
+      lineinfile:
+        path: /etc/yum.conf
+        regexp: '^gpgcheck'
+        line: gpgcheck=0
