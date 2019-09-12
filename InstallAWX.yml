@@ -1,0 +1,12 @@
+---
+- name: ADD AWX REPO AND INSTALL
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: add awx repo
+      command: wget -O /etc/yum.repos.d/awx-rpm.repo https://copr.fedorainfracloud.org/coprs/mrmeee/awx/repo/epel-7/mrmeee-awx-epel-7.repo
+      
+    - name: install awx
+      yum:
+        
