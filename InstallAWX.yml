@@ -9,7 +9,7 @@
       
     - name: install awx
       yum:
-        name: awx
+        name: ansible-awx
         state: present
         update_cache: yes
         disable_gpg_check: yes
