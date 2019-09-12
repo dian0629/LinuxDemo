@@ -12,6 +12,9 @@
           - memcached
           - nginx
           - ansible
+          - rh-git29
+          - rh-postgressql10
+          - rh-python36
         state: present
         disable_gpg_check: yes
         update_cache: yes
