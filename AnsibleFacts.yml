@@ -1,6 +1,6 @@
 ---
 - name: DISPLAY ANSIBLE_FACTS
-  hosts: all
+  hosts: "{{ target_host }}"
   
   tasks:
     - name: output variable ansible_facts
