@@ -9,7 +9,7 @@
       yum_repository:
         name: awx-rpm
         description: AWX RPM
-        baseurl: https://copr.fedorainfracloud.org/coprs/mrmeee/awx/repo/epel-7/mrmeee-awx-epel-7.repo
+        baseurl: https://copr.fedorainfracloud.org/coprs/mrmeee/ansible-awx/repo/epel-7/mrmeee-ansible-awx-epel-7.repo
       register: results
 
     - name: install awx
