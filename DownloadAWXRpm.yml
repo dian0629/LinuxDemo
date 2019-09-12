@@ -1,0 +1,26 @@
+  
+---
+- name: Download AWX RPM
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: download latest awx rpm from copr.fedorainfracloud.org
+      yum_repository:
+        name: awx-rpm
+        description: AWX RPM
+        baseurl: https://copr.fedorainfracloud.org/coprs/mrmeee/awx/repo/epel-7/mrmeee-awx-epel-7.repo
+      register: results
+      
+    - name: display results
+      debug:
+        var: results
+      when: results is changed
+      
+    - name: display installed repositories
+      command: yum repolist
+      register: repolist
+      
+    - name: display repolist
+      debug:
+        var: repolist.stdout_lines
