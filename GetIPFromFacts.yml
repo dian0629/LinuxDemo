@@ -1,0 +1,9 @@
+---
+- name: GET IP FROM ANSIBLE FACTS
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: display ansible_facts.all_ipv4_addresses
+      debug:
+        var: ansible_facts.all_ipv4_addresses
