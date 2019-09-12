@@ -1,5 +1,5 @@
 ---
-- name: INSTALL EPEL REPOSITORY
+- name: UPDATE HOSTS FILE
   hosts: all
   become: yes
   
@@ -7,7 +7,7 @@
     - name: add a line to the hosts file if it does not exist
       lineinfile:
         path: /etc/hosts
-        line: 10.249.0.137  AWX
+        line: 10.249.0.225  AWX
         create: yes
       register: hostsfile
       
