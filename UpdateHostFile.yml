@@ -9,8 +9,3 @@
         path: /etc/hosts
         line: "{{ ansible_default_ipv4.address }}  AWX"
         create: yes
-      register: hostsfile
-      
-    - name: display hosts file
-      debug:
-        var: hostsfile
